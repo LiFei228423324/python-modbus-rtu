@@ -65,6 +65,7 @@ def serial_ports():
     global cd, d
     d = QLabel(win)
     d.setText("端口：")
+    d.setText("断开：")
     d.setFont(QFont("Microsoft YaHei", 10, 55))
     d.resize(100, 30)
     d.move(450, 50)
