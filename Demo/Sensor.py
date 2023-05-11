@@ -685,10 +685,17 @@ def clear_fa():
 def clear_jie():
     jieshou.clear()
 
+def setCenter(self):
+    screen = QDesktopWidget().screenGeometry()
+    size = self.geometry()
+    self.move(int((screen.width() - size.width()) / 2), int((screen.height() - size.height()) / 2))
+
 
 if __name__ == '__main__':
-    global tcp_ip, tcp_port
 
+    QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling)
+    global tcp_ip, tcp_port
+    
     # thread_1 = Thread(target=Recv).start()
     # thread_2 = Thread(target=request).start()
 
@@ -697,7 +704,7 @@ if __name__ == '__main__':
 
     win.setGeometry(500, 100, 1000, 800)
     win.setWindowTitle("Sensors")
-
+    setCenter(win)
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~第一行~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
     connect = QComboBox(win)
     connect.addItem('串口连接')
