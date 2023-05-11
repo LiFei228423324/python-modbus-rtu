@@ -695,6 +695,7 @@ if __name__ == '__main__':
 
     QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling)
     global tcp_ip, tcp_port
+    # 
     
     # thread_1 = Thread(target=Recv).start()
     # thread_2 = Thread(target=request).start()
