@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QLabel, QPushBut
 from QCandyUi import CandyWindow
 from QCandyUi.CandyWindow import colorful
 
-
+# 
 # PushButton
 def click():
     if (isRuning):
