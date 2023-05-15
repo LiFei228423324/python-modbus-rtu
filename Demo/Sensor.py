@@ -1,4 +1,5 @@
 import datetime
+import time
 
 import serial
 from PyQt5.QtWidgets import *
